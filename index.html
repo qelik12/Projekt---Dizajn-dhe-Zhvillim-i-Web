@@ -4,11 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <title>Projekt</title>
 </head>
 <body>
 
-    <h1>TEST</h1>
+    <header id="navigation-bar">
+        <div class="logo"><a href="index.html">MADRID FC</a></div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Kryesore</a></li>
+                <li><a href="pages/sqaudra.html">Skuadra</a></li>
+                <li><a href="pages/rreth-nesh.html">Rreth Nesh</a></li>
+                <li><a href="pages/kontakt.html">Kontakti</a></li>
+                <li><a href="pages/login.html" class="btn-login">Login / Regjistrohu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero-section">
+            <h1>Zemra e Futbollit, Real Madrid</h1>
+            <p>Eksploroni fanellat, lajmet dhe historinë e klubit më të madh në botë.</p>
+            <a href="pages/sqaudra.html" class="btn-primary">Shiko Skuadrën</a>
+        </section>
+
+        <section id="featured-jerseys">
+            <h2>Fanellat e Këtij Sezoni</h2>
+            <div class="jersey-grid">
+                <div class="jersey-card">
+                    <img src="images/home-jersey.jpg" alt="Fanella Home">
+                    <h3>Fanella Home 2024/2025</h3>
+                    <p>Çmimi: 99.99 €</p>
+                    <button class="btn-primary">Shiko Detajet</button>
+                </div>
+                <div class="jersey-card">
+                    <img src="images/away-jersey.jpg" alt="Fanella Away">
+                    <h3>Fanella Away 2024/2025</h3>
+                    <p>Çmimi: 99.99 €</p>
+                    <button class="btn-primary">Shiko Detajet</button>
+                </div>
+                <div class="jersey-card">
+                    <img src="images/third-jersey.jpg" alt="Fanella Tretë">
+                    <h3>Fanella Tretë 2024/2025</h3>
+                    <p>Çmimi: 99.99 €</p>
+                    <button class="btn-primary">Shiko Detajet</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="latest-news">
+            <h2>Lajmet e Fundit</h2>
+            <p>Këtu do të vendoset përmbajtja dinamike e lajmeve.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Real Madrid Fan Page. I gjithë kodi është zhvilluar për Projektin e Web Dizajnit.</p>
+    </footer>
+
+    <script src="js/validation.js"></script>
     
 </body>
 </html>
