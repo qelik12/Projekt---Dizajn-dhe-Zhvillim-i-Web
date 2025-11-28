@@ -1,69 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lion Pride F.C. - Official Home</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <title>Projekt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header id="navigation-bar">
-        <div class="logo"><a href="index.html">MADRID FC</a></div>
-        <nav class="nav-links">
+    <div class="main-background"></div>
+
+    <header>
+        <div class="top-bar">
+            <a href="pages/login.html">Login</a>
+            <a href="pages/register.html">Register</a>
+            <a href="#">Search 🔍</a>
+        </div>
+
+        <div class="brand-center">
+            <div class="logo-container">
+                <img src="images/Logo.png" alt="Logo" class="main-logo">
+            </div>
+            <h1>LION PRIDE F.C.</h1>
+        </div>
+
+        <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Kryesore</a></li>
-                <li><a href="pages/sqaudra.html">Skuadra</a></li>
-                <li><a href="pages/rreth-nesh.html">Rreth Nesh</a></li>
-                <li><a href="pages/kontakt.html">Kontakti</a></li>
-                <li><a href="pages/login.html" class="btn-login">Login / Regjistrohu</a></li>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="pages/sqaudra.html">TEAM</a></li>
+                <li><a href="pages/lajme.html">NEWS</a></li>
+                <li><a href="pages/ndeshjet.html">MATCHES</a></li>
+                <li><a href="pages/shop.html">SHOP</a></li>
+                <li><a href="pages/tickets.html">TICKETS</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="hero-section">
-            <h1>Zemra e Futbollit, Real Madrid</h1>
-            <p>Eksploroni fanellat, lajmet dhe historinë e klubit më të madh në botë.</p>
-            <a href="pages/sqaudra.html" class="btn-primary">Shiko Skuadrën</a>
-        </section>
-
-        <section id="featured-jerseys">
-            <h2>Fanellat e Këtij Sezoni</h2>
-            <div class="jersey-grid">
-                <div class="jersey-card">
-                    <img src="images/home-jersey.jpg" alt="Fanella Home">
-                    <h3>Fanella Home 2024/2025</h3>
-                    <p>Çmimi: 99.99 €</p>
-                    <button class="btn-primary">Shiko Detajet</button>
-                </div>
-                <div class="jersey-card">
-                    <img src="images/away-jersey.jpg" alt="Fanella Away">
-                    <h3>Fanella Away 2024/2025</h3>
-                    <p>Çmimi: 99.99 €</p>
-                    <button class="btn-primary">Shiko Detajet</button>
-                </div>
-                <div class="jersey-card">
-                    <img src="images/third-jersey.jpg" alt="Fanella Tretë">
-                    <h3>Fanella Tretë 2024/2025</h3>
-                    <p>Çmimi: 99.99 €</p>
-                    <button class="btn-primary">Shiko Detajet</button>
+    <main class="container">
+        
+        <div class="hero-grid">
+            
+            <div class="main-featured-card">
+                <img src="images/players-field.jpg" alt="Lojtarët në fushë">
+                <div class="card-overlay">
+                    <span class="tag">MATCH REPORT</span>
+                    <h2>FITORE E MADHE NË SHTËPI KUNDËR RIVALËVE</h2>
+                    <a href="#" class="read-more">LEXO MË SHUMË &rarr;</a>
                 </div>
             </div>
-        </section>
 
-        <section id="latest-news">
-            <h2>Lajmet e Fundit</h2>
-            <p>Këtu do të vendoset përmbajtja dinamike e lajmeve.</p>
-        </section>
+            <div class="side-news-list">
+                <h3>LATEST NEWS</h3>
+                
+                <div class="side-card">
+                    <img src="images/news1.jpg" alt="Lajm i vogel">
+                    <div class="side-info">
+                        <span class="date">28 NËNTOR</span>
+                        <h4>Transferimet e reja të sezonit</h4>
+                    </div>
+                </div>
+
+                <div class="side-card">
+                    <img src="images/news2.jpg" alt="Lajm i vogel">
+                    <div class="side-info">
+                        <span class="date">27 NËNTOR</span>
+                        <h4>Intervistë ekskluzive me kapitenin</h4>
+                    </div>
+                </div>
+
+                <div class="side-card schedule-card">
+                    <h4>NDESHJA E RADHËS</h4>
+                    <p>Lion Pride vs. City FC</p>
+                    <button class="btn-small">BLEJ BILETA</button>
+                </div>
+            </div>
+
+        </div>
+
     </main>
 
     <footer>
-        <p>&copy; 2024 Real Madrid Fan Page. I gjithë kodi është zhvilluar për Projektin e Web Dizajnit.</p>
+        <p>&copy; 2024 Lion Pride F.C. Official Website</p>
     </footer>
 
-    <script src="js/validation.js"></script>
-    
+    <script src="js/validation.js"></script> 
 </body>
 </html>
