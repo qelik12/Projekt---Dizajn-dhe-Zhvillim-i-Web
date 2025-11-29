@@ -271,3 +271,144 @@ footer {
         font-size: 2em;
     }
 }
+
+/* =========================================
+   STILET PËR FAQET AUTH (Register/Login)
+   ========================================= */
+
+/* Sfondi specifik për Register/Login */
+.register-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Vendos emrin e sakte te fotos qe do (psh: 14581468_5499524.jpg) */
+    background-image: url('../images/14581468_5499524.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* Kontejneri qe e mban formen ne mes */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* E vendos ne mes te ekranit vertikalisht */
+    padding: 20px;
+}
+
+/* Karta e Formës (Glass effect me vija te arta) */
+.auth-card {
+    background-color: rgba(4, 18, 37, 0.95); /* Sfond shume i erret, pak transparent */
+    border: 2px solid #c5a059; /* Kornize e arte */
+    padding: 40px;
+    width: 100%;
+    max-width: 500px; /* Nuk behet me e gjere se kaq */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.2); /* Shkëlqim i lehtë i artë */
+    text-align: center;
+}
+
+.auth-card h2 {
+    font-family: 'Oswald', sans-serif;
+    color: #c5a059;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.auth-card p {
+    color: #cccccc;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+/* Inputet (Fushat e shkrimit) */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.1); /* Pak transparente */
+    border: 1px solid #444;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #c5a059; /* Behet e arte kur klikon */
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Checkbox */
+.form-check {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+
+.form-check input {
+    margin-right: 10px;
+}
+
+/* Butoni i madh i Artë */
+.btn-gold-full {
+    width: 100%;
+    padding: 15px;
+    background-color: #c5a059;
+    color: #041225;
+    border: none;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.btn-gold-full:hover {
+    background-color: #ffffff;
+}
+
+/* Linket poshte */
+.form-footer {
+    margin-top: 20px;
+}
+
+.form-footer a {
+    color: #c5a059;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Mesazhet e Errorit (per JavaScript) */
+.error-msg {
+    color: #ff4d4d;
+    font-size: 0.8em;
+    margin-top: 5px;
+    display: block;
+    height: 15px; /* Mban vendin */
+}
