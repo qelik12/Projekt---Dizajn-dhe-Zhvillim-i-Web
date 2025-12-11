@@ -43,7 +43,7 @@ header {
     justify-content: flex-end;
     padding-right: 5%;
     font-size: 0.8em;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
 .top-bar a {
@@ -411,4 +411,362 @@ footer {
     margin-top: 5px;
     display: block;
     height: 15px; /* Mban vendin */
+}
+
+/* =========================================
+   STILET PËR FAQET E BRENDSHME (Team, Matches, Shop)
+   ========================================= */
+
+/* Titulli i Faqes (Header i vogël për çdo faqe) */
+.page-header {
+    background-color: #041225;
+    padding: 40px 5%;
+    text-align: center;
+    border-bottom: 2px solid #c5a059;
+}
+
+.page-header h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    color: #c5a059;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- FAQJA TEAM (SKUADRA) --- */
+.team-grid {
+    display: grid;
+    /* Krijon kolona automatike responsive */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+    padding: 50px 5%;
+}
+
+.player-card {
+    background-color: rgba(10, 25, 47, 0.9);
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+    text-align: center;
+}
+
+.player-card:hover {
+    transform: translateY(-10px);
+    border-color: #c5a059; /* Bëhet e artë në hover */
+}
+
+.player-image {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-bottom: 2px solid #c5a059;
+}
+
+.player-info {
+    padding: 20px;
+}
+
+.player-number {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    color: #c5a059;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.player-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.player-position {
+    color: #cccccc;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- FAQJA MATCHES (NDESHJET) --- */
+.matches-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.match-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(10, 25, 47, 0.9);
+    border: 1px solid #444;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #c5a059; /* Shirit i artë majtas */
+    border-radius: 5px;
+}
+
+.match-teams {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.vs-badge {
+    background-color: #c5a059;
+    color: #041225;
+    padding: 5px 10px;
+    font-size: 0.6em;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.match-info {
+    text-align: right;
+}
+
+.match-date {
+    display: block;
+    color: #c5a059;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.match-stadium {
+    color: #888;
+    font-size: 0.8em;
+}
+
+/* Butoni ne ndeshje */
+.btn-ticket {
+    background-color: transparent;
+    border: 1px solid #c5a059;
+    color: #c5a059;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-left: 20px;
+}
+
+.btn-ticket:hover {
+    background-color: #c5a059;
+    color: #041225;
+}
+
+/* =========================================
+   STILET PËR NEWS, SHOP, ABOUT US
+   ========================================= */
+
+/* --- FAQJA SHOP (DYQANI) --- */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 50px 5%;
+}
+
+.product-card {
+    background-color: rgba(10, 25, 47, 0.9);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    border-color: #c5a059;
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-title {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.product-price {
+    display: block;
+    font-size: 1.4em;
+    color: #c5a059;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.btn-buy {
+    background-color: transparent;
+    border: 1px solid #c5a059;
+    color: #c5a059;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #c5a059;
+    color: #041225;
+}
+
+/* --- FAQJA NEWS (LAJME) --- */
+.news-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: row; /* Imazhi majtas, teksti djathtas */
+    background-color: rgba(10, 25, 47, 0.8);
+    border-bottom: 1px solid #333;
+    margin-bottom: 30px;
+    align-items: center;
+    gap: 20px;
+}
+
+.news-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.news-content h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.news-meta {
+    font-size: 0.8em;
+    color: #c5a059;
+    margin-bottom: 10px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.news-excerpt {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.read-more-link {
+    color: #c5a059;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+}
+
+.read-more-link:hover {
+    border-bottom: 1px solid #c5a059;
+}
+
+/* --- FAQJA ABOUT US (RRETH NESH) --- */
+.about-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: rgba(10, 25, 47, 0.9);
+    border-left: 5px solid #c5a059;
+}
+
+.about-text p {
+    color: #dddddd;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.trophy-section {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.trophy-list span {
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 1.2em;
+    color: #c5a059;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* RESPONSIVE PER LAJMET */
+@media (max-width: 768px) {
+    .news-item {
+        flex-direction: column;
+    }
+    .news-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/* =========================
+   MOBILE MENU STYLES
+   ========================= */
+.hamburger {
+    display: none; /* Fshihet ne desktop */
+    font-size: 30px;
+    cursor: pointer;
+    color: #c5a059;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Shfaqet ne telefon */
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    .main-nav ul {
+        display: none; /* Fshihet lista normalisht */
+        flex-direction: column;
+        background-color: rgba(4, 18, 37, 0.95);
+        width: 100%;
+        position: absolute;
+        top: 180px; /* Rregulloje sipas lartesise se headerit */
+        left: 0;
+        z-index: 100;
+    }
+
+    .main-nav ul.show {
+        display: flex; /* Shfaqet kur klikohet hamburgeri */
+    }
+
+    .main-nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
 }
