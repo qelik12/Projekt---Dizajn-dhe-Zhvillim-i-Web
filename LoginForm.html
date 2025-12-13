@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>Login në Faqe</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <form id="Login">
-    <img src="Logo.png" alt="Logo" id="Logo">
-    <h3 id="Login1">Login</h3>
-    <label for="username"></label>
-    <input type="text" id="username" name="username" placeholder="Username:"required>
-    <br>
-    <label for="password"></label>
-    <input type="Password" id="Password" name="Password" placeholder="Password:">
-    <br>
-    <button type="submit" id="button">Login</button>
-    <h5 id="register1">Register</h5>
-    </form>
-</body>
+    <div id="contLog">
+      <form id="loginForm">
+        <img src="Logo.png" alt="Logo" id="loginLogo">
+
+        <h3 id="loginTitle">Hyr në Llogari (Login)</h3>
+        
+        <label for="username" class="sr-only">Emri i përdoruesit</label>
+        <input type="text" id="username" name="username" placeholder="Emri i Përdoruesit:" required>
+        
+        <label for="password" class="sr-only">Fjalëkalimi</label>
+        <input type="password" id="password" name="password" placeholder="Fjalëkalimi:" required>
+        
+        <button type="submit" id="loginButton">Hyr</button>
+        
+        <h5 id="registerLink">Nuk keni llogari? <a href="register.html">Regjistrohuni</a></h5>
+      </form>
+  </div>
+    
+    </body>
 </html>

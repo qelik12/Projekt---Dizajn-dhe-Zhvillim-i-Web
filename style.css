@@ -41,6 +41,7 @@ header {
 .top-bar {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     padding-right: 5%;
     font-size: 0.8em;
     margin-bottom: 20px; 
@@ -57,6 +58,31 @@ header {
 .top-bar a:hover {
     opacity: 1;
     color: #c5a059; /* Ngjyra e Artë */
+}
+
+/* Stili për kutinë e kërkimit në header */
+.search-container {
+    display: inline-flex; /* Që të rrijë në rresht */
+    align-items: center;
+    margin-left: 15px;
+    background-color: white; /* Sfondi i bardhë për inputin */
+    border-radius: 20px; /* Rrubullakosja */
+    padding: 2px 10px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+    width: 120px; /* Gjerësia e kërkimit */
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .brand-center h1 {
@@ -769,4 +795,108 @@ footer {
         margin: 15px 0;
         text-align: center;
     }
+}
+
+#contLog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* E vendos ne mes te ekranit vertikalisht */
+    padding: 20px;
+}
+
+#loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #34495e; 
+    padding: 35px 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); 
+    width: 320px; 
+    max-width: 90%;
+}
+
+/* Stilimi i Logos */
+#loginLogo{
+    width: 100px; 
+    height: 100px;
+    margin-bottom: 25px;
+    border-radius: 50%; /* Nëse logoja është katrore */
+    object-fit: cover;
+}
+
+/* Stilimi i Titullit */
+#loginTitle {
+    color: #ecf0f1; 
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* Stilimi i Fushave të Inputit */
+#loginForm input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    background-color: #ecf0f1; 
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+#loginForm input:focus{
+    border-color: #3498db; 
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Stilimi i Butonit (Përdor ID të ndryshme për të pasur stilime specifike) */
+#loginButton{
+    width: 100%;
+    padding: 12px;
+    background-color: #2ecc71; /* Butoni Login/Register */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#loginButton:hover:hover {
+    background-color: #27ae60; 
+}
+
+/* Stilimi i Linkut/Tekstit për Regjistrim */
+#registerLink {
+    color: #ecf0f1; 
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+#registerLink a {
+    color: #3498db; /* Ngjyra e linkut */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#registerLink a:hover {
+    text-decoration: underline;
+}
+
+/* Klasë ndihmëse për fshehje vizuale të Label-it */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }

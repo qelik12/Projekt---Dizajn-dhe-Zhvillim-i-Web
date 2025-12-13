@@ -156,3 +156,47 @@ function isValidEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
 }
+
+/* === LOGJIKA E KËRKIMIT === */
+const searchInput = document.getElementById('searchInput');
+const searchBtn = document.getElementById('searchBtn');
+
+function performSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+
+    if (query === "") return;
+
+    // Logjika e drejtimit - Tani me drejtim direkt
+    if (query.includes('shop') || query.includes('fanella') || query.includes('blej')) {
+        // Dërgo direkt te emri i saktë i skedarit (shop.html)
+        window.location.href = 'shop.html'; 
+    } 
+    else if (query.includes('squad') || query.includes('ekipi') || query.includes('lojtaret')) {
+        // Dërgo direkt te emri i saktë i skedarit (squad.html)
+        window.location.href = 'squad.html'; 
+    }
+    else if (query.includes('lajme') || query.includes('news')) {
+        // Dërgo direkt te emri i saktë i skedarit (news.html)
+        window.location.href = 'news.html';
+    }
+    else if (query.includes('kontakt') || query.includes('rreth')) {
+        // Dërgo direkt te emri i saktë i skedarit (aboutus.html)
+        window.location.href = 'aboutus.html';
+    }
+    else {
+        alert("Nuk u gjet asgjë për: " + query);
+    }
+    
+    // Pastro fushën pas kërkimit
+    searchInput.value = ''; 
+}
+
+// Lidhja me butonin dhe Enter - Kjo pjesë është në rregull
+if (searchBtn) {
+    searchBtn.addEventListener('click', performSearch);
+}
+if (searchInput) {
+    searchInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') performSearch();
+    });
+}
