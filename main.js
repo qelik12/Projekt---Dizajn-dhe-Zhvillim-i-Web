@@ -70,30 +70,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // B. Validimi i Formës Login
-    const loginForm = document.getElementById('loginForm'); // Sigurohu qe forma ne login.html ka id="loginForm"
-    if (loginForm) {
-        loginForm.addEventListener('submit', (e) => {
-            let isValid = true;
-            const email = document.getElementById('email');
-            const password = document.getElementById('password');
 
-            clearErrors();
+const loginForm = document.getElementById('loginForm');
 
-            if (!isValidEmail(email.value)) {
-                showError(email, 'Email nuk është valid');
-                isValid = false;
-            }
+if (loginForm) {
+    loginForm.addEventListener('submit', (e) => {
+        
+        const usernameInput = document.getElementById('username'); 
+        const passwordInput = document.getElementById('password'); 
+        
+        let isValid = true;
+        clearErrors(); 
+        
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value.trim();
+        
+        // 1. Validimi i Emrit të Përdoruesit/Email-it (Mbetet i pandryshuar)
+        if (username === '') {
+            showError(usernameInput, 'Ju lutemi shkruani Emrin e Përdoruesit ose E-mailin.');
+            isValid = false;
+        } else if (username.length < 3) {
+             showError(usernameInput, 'Emri i Përdoruesit është shumë i shkurtër.');
+             isValid = false;
+        }
 
-            if (password.value.trim() === '') {
-                showError(password, 'Shkruani fjalëkalimin');
-                isValid = false;
-            }
-
-            if (!isValid) {
-                e.preventDefault();
-            }
-        });
-    }
+        // 2. Validimi i Fjalëkalimit (KU VENDOSIM RREGULLIN E RI)
+        if (password === '') {
+            showError(passwordInput, 'Shkruani Fjalëkalimin.');
+            isValid = false;
+        } else if (password.length < 8) { // <--- Rregulli i ri
+            showError(passwordInput, 'Fjalëkalimi duhet të ketë së paku 8 karaktere.');
+            isValid = false;
+        }
+        
+        // 3. Parandalimi i Dërgimit
+        if (!isValid) {
+            e.preventDefault(); 
+            return;
+        }
+        
+        // Nëse është i vlefshëm, vazhdon me dërgimin e formës...
+        // ...
+        
+    });
+}
 
     // C. Validimi i Formës së Kontaktit
     const contactForm = document.getElementById('contactForm');

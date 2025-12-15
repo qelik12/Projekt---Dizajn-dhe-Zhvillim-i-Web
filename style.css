@@ -17,6 +17,7 @@ body {
     flex-direction: column;
 }
 
+
 /* Sfondi i fiksuar mbrapa */
 .main-background {
     position: fixed;
@@ -29,6 +30,67 @@ body {
     background-size: cover;
     background-position: center;
     z-index: -1; /* E çon prapa cdo gjeje */
+}
+.aboutus-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Sigurohu qe emri i fotos eshte i sakte ne folderin images */
+    background-image: url('../images/23916538_6877205.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+}
+.matches-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Sigurohu qe emri i fotos eshte i sakte ne folderin images */
+    background-image: url('../images/23985649_6875128.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.shop-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Sigurohu qe emri i fotos eshte i sakte ne folderin images */
+    background-image: url('../images/23985650_6875131.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.squad-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Sigurohu qe emri i fotos eshte i sakte ne folderin images */
+    background-image: url('../images/24022249_6837004.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+.news-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Sigurohu qe emri i fotos eshte i sakte ne folderin images */
+    background-image: url('../images/14581468_5499524.jpg'); 
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
 /* --- HEADER --- */
@@ -466,6 +528,10 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 30px;
     padding: 50px 5%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+    padding: 50px 5%;
+    
 }
 
 .player-card {
@@ -899,4 +965,97 @@ footer {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+    background-image: url('24022249_6837004.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* Për të qendërzuar përdorim fleksibilitetin */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#Hyerja_1 {
+    display: flex; 
+    flex-direction: column;
+    width: 290px;
+    height: auto; 
+    border: 1px solid dodgerblue;
+    padding: 4%;
+    background-color: rgba(0, 0, 44, 0.466);
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shtuar hije për lehtësi vizuale */
+}
+
+#Shenja_1 {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 10px auto; 
+}
+
+/* Titulli (ID Login_1) */
+#Login_1 {
+    color: aqua;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Stili i inputit të username (ID useri_1) */
+#useri_1 {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.822);
+    color: black;
+    padding: 9px;
+    border: none; /* Ndryshuar nga 1 në none */
+    border-radius: 10px;
+    margin-top: 5px; /* Hapësirë lart */
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* Stili i inputit të fjalëkalimit (ID passi_1) */
+#passi_1 {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.822);
+    color: black;
+    padding: 9px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px; /* Hapësirë lart */
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* Stili i butonit (ID butoni_1) */
+#butoni_1 {
+    background-color: rgba(255, 255, 255, 0.212);
+    color: aqua;
+    padding: 8px;
+    border: 1px solid aqua; /* Përmirësuar nga 1 në 1px solid */
+    cursor: pointer;
+    margin-top: 7px;
+    border-radius: 15px;
+}
+
+/* Stili i regjistrimit (ID register1_1) */
+#register1_1 {
+    color: aqua;
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Stili i labelave (etiketave) */
+#Hyerja_1 label {
+    color: white;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Heqim linjat e ndarjes së rreshtit <br> */
+#Hyerja_1 br {
+    display: none;
 }

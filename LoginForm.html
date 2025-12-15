@@ -3,27 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login në Faqe</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>Hyrja në Llogari - Lion Pride F.C.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="contLog">
-      <form id="loginForm">
-        <img src="Logo.png" alt="Logo" id="loginLogo">
 
-        <h3 id="loginTitle">Hyr në Llogari (Login)</h3>
+    <div class="register-background"></div>
+
+    <header>
+        <div class="brand-center">
+            <div class="logo-container">
+                <img src="../images/Logo.png" alt="Logo" class="main-logo">
+            </div>
+            <h1><a href="index.html" style="color: white; text-decoration: none;">LION PRIDE F.C.</a></h1>
+        </div>
+    </header>
+
+    <main class="auth-container">
         
-        <label for="username" class="sr-only">Emri i përdoruesit</label>
-        <input type="text" id="username" name="username" placeholder="Emri i Përdoruesit:" required>
-        
-        <label for="password" class="sr-only">Fjalëkalimi</label>
-        <input type="password" id="password" name="password" placeholder="Fjalëkalimi:" required>
-        
-        <button type="submit" id="loginButton">Hyr</button>
-        
-        <h5 id="registerLink">Nuk keni llogari? <a href="register.html">Regjistrohuni</a></h5>
-      </form>
-  </div>
-    
-    </body>
+        <div class="auth-card">
+            <h2>Hyr në Llogari</h2>/
+            <p>Përdorni kredencialet tuaja zyrtare</p>
+
+            <form id="loginForm" onsubmit="return validateLogin(event)"> 
+                
+                <div class="form-group">
+                    <label for="username">Emri i Përdoruesit</label>
+                    <input type="text" id="username" name="username" placeholder="Emri i Përdoruesit ose E-mail">
+                    <span class="error-msg" id="userError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Fjalëkalimi</label>
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <span class="error-msg" id="passError"></span>
+                </div>
+
+                <button type="submit" class="btn-gold-full">HYR</button>
+
+                <div class="form-footer">
+                    <p>Nuk keni llogari? <a href="register.html">Regjistrohuni këtu</a></p>
+                    <p><a href="#" class="forgot-link">Kam harruar Fjalëkalimin</a></p>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lion Pride F.C. Official Website</p>
+    </footer>
+
+    <script src="main.js"></script> 
+</body>
 </html>
