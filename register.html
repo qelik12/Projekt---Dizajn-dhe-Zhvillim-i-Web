@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Lion Pride F.C.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="register-background"></div>
+
+    <header>
+        <div class="brand-center">
+            <div class="logo-container">
+                <img src="../images/Logo.png" alt="Logo" class="main-logo">
+            </div>
+            <h1><a href="../index.html" style="color: white; text-decoration: none;">LION PRIDE F.C.</a></h1>
+        </div>
+    </header>
+
+    <main class="auth-container">
+        
+        <div class="auth-card">
+            <h2>BASHKOHU ME SQUADRËN</h2>
+            <p>Krijo llogarinë tënde zyrtare</p>
+
+            <form id="registerForm" onsubmit="return validateRegister(event)"> <div class="form-group">
+                    <label for="fullname">Emri i Plotë</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Emri dhe Mbiemri">
+                    <span class="error-msg" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail Adresa</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com">
+                    <span class="error-msg" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Fjalëkalimi</label>
+                    <input type="password" id="password" name="password" placeholder="Minimum 8 karaktere">
+                    <span class="error-msg" id="passError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Konfirmo Fjalëkalimin</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Përsërit fjalëkalimin">
+                    <span class="error-msg" id="confirmPassError"></span>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">Pranoj Termat dhe Kushtet</label>
+                </div>
+
+                <button type="submit" class="btn-gold-full">REGJISTROHU</button>
+
+                <div class="form-footer">
+                    <p>Ke tashmë një llogari? <a href="LoginForm.html">Hyni këtu</a></p>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lion Pride F.C. Official Website</p>
+    </footer>
+
+    <script src="main.js"></script> 
+</body>
+</html>
