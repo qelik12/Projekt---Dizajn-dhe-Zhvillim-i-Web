@@ -1,7 +1,7 @@
-/* Importimi i Fontit Sportiv */
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;500&display=swap');
 
-/* 1. RESET DHE STRUKTURA BAZE */
+/*STRUKTURA BAZE */
 * {
     margin: 0;
     padding: 0;
@@ -10,26 +10,24 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #041225; /* Blu e errët */
-    color: #ffffff;            /* Tekst i bardhë */
+    background-color: #041225; 
+    color: #ffffff;            
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 
-/* Sfondi i fiksuar mbrapa */
 .main-background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Sigurohu qe emri i fotos eshte i sakte ne folderin images */
     background-image: url('../images/23916547_6877208.jpg'); 
     background-size: cover;
     background-position: center;
-    z-index: -1; /* E çon prapa cdo gjeje */
+    z-index: -1; 
 }
 .aboutus-background {
     position: fixed;
@@ -37,7 +35,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Sigurohu qe emri i fotos eshte i sakte ne folderin images */
     background-image: url('../images/23916538_6877205.jpg'); 
     background-size: cover;
     background-position: center;
@@ -50,7 +47,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Sigurohu qe emri i fotos eshte i sakte ne folderin images */
     background-image: url('../images/23985649_6875128.jpg'); 
     background-size: cover;
     background-position: center;
@@ -62,7 +58,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Sigurohu qe emri i fotos eshte i sakte ne folderin images */
     background-image: url('../images/23985650_6875131.jpg'); 
     background-size: cover;
     background-position: center;
@@ -74,7 +69,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Sigurohu qe emri i fotos eshte i sakte ne folderin images */
     background-image: url('../images/24022249_6837004.jpg'); 
     background-size: cover;
     background-position: center;
@@ -86,14 +80,13 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Sigurohu qe emri i fotos eshte i sakte ne folderin images */
     background-image: url('../images/14581468_5499524.jpg'); 
     background-size: cover;
     background-position: center;
     z-index: -1;
 }
 
-/* --- HEADER --- */
+/*HEADER*/
 header {
     text-align: center;
     padding-top: 10px;
@@ -119,16 +112,15 @@ header {
 
 .top-bar a:hover {
     opacity: 1;
-    color: #c5a059; /* Ngjyra e Artë */
+    color: #c5a059; 
 }
 
-/* Stili për kutinë e kërkimit në header */
 .search-container {
-    display: inline-flex; /* Që të rrijë në rresht */
+    display: inline-flex; 
     align-items: center;
     margin-left: 15px;
-    background-color: white; /* Sfondi i bardhë për inputin */
-    border-radius: 20px; /* Rrubullakosja */
+    background-color: white; 
+    border-radius: 20px; 
     padding: 2px 10px;
 }
 
@@ -137,7 +129,7 @@ header {
     outline: none;
     padding: 5px;
     font-size: 14px;
-    width: 120px; /* Gjerësia e kërkimit */
+    width: 120px; 
 }
 
 .search-container button {
@@ -163,10 +155,9 @@ header {
     margin: 0 auto;
 }
 
-/* --- NAVIGACIONI --- */
+/*NAVIGACIONI BAR*/
 .main-nav {
     margin-top: 20px;
-    /* Ngjyra e artë me transparencë (rgba) për vizat ndarëse */
     border-top: 1px solid rgba(197, 160, 89, 0.3); 
     border-bottom: 1px solid rgba(197, 160, 89, 0.3);
     background-color: rgba(0,0,0,0.3);
@@ -194,10 +185,9 @@ header {
 }
 
 .main-nav a:hover, .main-nav a.active {
-    color: #c5a059; /* Ngjyra e Artë në Hover */
+    color: #c5a059; 
 }
 
-/* --- HERO GRID LAYOUT --- */
 .container {
     max-width: 1200px;
     margin: 40px auto;
@@ -207,17 +197,16 @@ header {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* 2 pjesë majtas, 1 pjesë djathtas */
+    grid-template-columns: 2fr 1fr; 
     gap: 30px;
 }
 
-/* Karta e Madhe Majtas (Match Report) */
 .main-featured-card {
     position: relative;
     height: 450px;
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid rgba(197, 160, 89, 0.5); /* Kornizë e hollë e artë */
+    border: 1px solid rgba(197, 160, 89, 0.5); 
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
@@ -229,7 +218,7 @@ header {
 }
 
 .main-featured-card:hover img {
-    transform: scale(1.05); /* Zoom efekt */
+    transform: scale(1.05); 
 }
 
 .card-overlay {
@@ -242,7 +231,7 @@ header {
 }
 
 .card-overlay .tag {
-    background-color: #c5a059; /* Sfondi i artë i etiketës */
+    background-color: #c5a059; 
     color: #000000;
     padding: 5px 10px;
     font-weight: bold;
@@ -259,15 +248,14 @@ header {
 }
 
 .read-more {
-    color: #c5a059; /* Linku i artë */
+    color: #c5a059; 
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Lista Djathtas (Lajmet e vogla) */
 .side-news-list h3 {
     font-family: 'Oswald', sans-serif;
-    border-bottom: 2px solid #c5a059; /* Vija poshtë titullit */
+    border-bottom: 2px solid #c5a059; 
     padding-bottom: 5px;
     margin-bottom: 20px;
     display: inline-block;
@@ -278,7 +266,7 @@ header {
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
-    background-color: rgba(10, 25, 47, 0.85); /* Sfond gjysmë transparent */
+    background-color: rgba(10, 25, 47, 0.85); 
     padding: 10px;
     border-radius: 5px;
     transition: transform 0.3s;
@@ -286,7 +274,7 @@ header {
 
 .side-card:hover {
     transform: translateX(5px);
-    border-left: 3px solid #c5a059; /* Vija anash ne hover */
+    border-left: 3px solid #c5a059; 
 }
 
 .side-card img {
@@ -305,12 +293,11 @@ header {
 .side-info .date {
     display: block;
     font-size: 0.75em;
-    color: #c5a059; /* Data me ngjyrë të artë */
+    color: #c5a059; 
     margin-bottom: 5px;
     text-transform: uppercase;
 }
 
-/* Karta e ndeshjes (Bileta) */
 .schedule-card {
     flex-direction: column;
     text-align: center;
@@ -335,9 +322,8 @@ header {
     color: #041225;
 }
 
-/* --- FOOTER --- */
 footer {
-    background-color: #020a14; /* Sfond shumë i errët */
+    background-color: #020a14; 
     color: #cccccc;
     padding: 30px 5%;
     text-align: center;
@@ -345,10 +331,9 @@ footer {
     border-top: 3px solid #c5a059;
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .hero-grid {
-        grid-template-columns: 1fr; /* Bëhet 1 kolonë në telefon */
+        grid-template-columns: 1fr; 
     }
     
     .main-nav ul {
@@ -360,42 +345,35 @@ footer {
     }
 }
 
-/* =========================================
-   STILET PËR FAQET AUTH (Register/Login)
-   ========================================= */
 
-/* Sfondi specifik për Register/Login */
 .register-background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Vendos emrin e sakte te fotos qe do (psh: 14581468_5499524.jpg) */
     background-image: url('../images/14581468_5499524.jpg'); 
     background-size: cover;
     background-position: center;
     z-index: -1;
 }
 
-/* Kontejneri qe e mban formen ne mes */
 .auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh; /* E vendos ne mes te ekranit vertikalisht */
+    min-height: 80vh; 
     padding: 20px;
 }
 
-/* Karta e Formës (Glass effect me vija te arta) */
 .auth-card {
-    background-color: rgba(4, 18, 37, 0.95); /* Sfond shume i erret, pak transparent */
-    border: 2px solid #c5a059; /* Kornize e arte */
+    background-color: rgba(4, 18, 37, 0.95); 
+    border: 2px solid #c5a059; 
     padding: 40px;
     width: 100%;
-    max-width: 500px; /* Nuk behet me e gjere se kaq */
+    max-width: 500px; 
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(197, 160, 89, 0.2); /* Shkëlqim i lehtë i artë */
+    box-shadow: 0 0 20px rgba(197, 160, 89, 0.2); 
     text-align: center;
 }
 
@@ -413,7 +391,6 @@ footer {
     font-size: 0.9em;
 }
 
-/* Inputet (Fushat e shkrimit) */
 .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -430,7 +407,7 @@ footer {
 .form-group input {
     width: 100%;
     padding: 12px;
-    background-color: rgba(255, 255, 255, 0.1); /* Pak transparente */
+    background-color: rgba(255, 255, 255, 0.1); 
     border: 1px solid #444;
     color: #ffffff;
     border-radius: 4px;
@@ -440,11 +417,10 @@ footer {
 
 .form-group input:focus {
     outline: none;
-    border-color: #c5a059; /* Behet e arte kur klikon */
+    border-color: #c5a059; 
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Checkbox */
 .form-check {
     text-align: left;
     margin-bottom: 20px;
@@ -457,7 +433,6 @@ footer {
     margin-right: 10px;
 }
 
-/* Butoni i madh i Artë */
 .btn-gold-full {
     width: 100%;
     padding: 15px;
@@ -477,7 +452,6 @@ footer {
     background-color: #ffffff;
 }
 
-/* Linket poshte */
 .form-footer {
     margin-top: 20px;
 }
@@ -492,20 +466,15 @@ footer {
     text-decoration: underline;
 }
 
-/* Mesazhet e Errorit (per JavaScript) */
 .error-msg {
     color: #ff4d4d;
     font-size: 0.8em;
     margin-top: 5px;
     display: block;
-    height: 15px; /* Mban vendin */
+    height: 15px;
 }
 
-/* =========================================
-   STILET PËR FAQET E BRENDSHME (Team, Matches, Shop)
-   ========================================= */
 
-/* Titulli i Faqes (Header i vogël për çdo faqe) */
 .page-header {
     background-color: #041225;
     padding: 40px 5%;
@@ -521,10 +490,8 @@ footer {
     letter-spacing: 2px;
 }
 
-/* --- FAQJA TEAM (SKUADRA) --- */
 .team-grid {
     display: grid;
-    /* Krijon kolona automatike responsive */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 30px;
     padding: 50px 5%;
@@ -545,7 +512,7 @@ footer {
 
 .player-card:hover {
     transform: translateY(-10px);
-    border-color: #c5a059; /* Bëhet e artë në hover */
+    border-color: #c5a059; 
 }
 
 .player-image {
@@ -581,7 +548,6 @@ footer {
     letter-spacing: 1px;
 }
 
-/* --- FAQJA MATCHES (NDESHJET) --- */
 .matches-container {
     max-width: 1000px;
     margin: 50px auto;
@@ -596,7 +562,7 @@ footer {
     border: 1px solid #444;
     padding: 20px;
     margin-bottom: 20px;
-    border-left: 5px solid #c5a059; /* Shirit i artë majtas */
+    border-left: 5px solid #c5a059; 
     border-radius: 5px;
 }
 
@@ -634,7 +600,6 @@ footer {
     font-size: 0.8em;
 }
 
-/* Butoni ne ndeshje */
 .btn-ticket {
     background-color: transparent;
     border: 1px solid #c5a059;
@@ -651,11 +616,7 @@ footer {
     color: #041225;
 }
 
-/* =========================================
-   STILET PËR NEWS, SHOP, ABOUT US
-   ========================================= */
 
-/* --- FAQJA SHOP (DYQANI) --- */
 .shop-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -724,7 +685,6 @@ footer {
     color: #041225;
 }
 
-/* --- FAQJA NEWS (LAJME) --- */
 .news-container {
     max-width: 1000px;
     margin: 40px auto;
@@ -733,7 +693,7 @@ footer {
 
 .news-item {
     display: flex;
-    flex-direction: row; /* Imazhi majtas, teksti djathtas */
+    flex-direction: row; 
     background-color: rgba(10, 25, 47, 0.8);
     border-bottom: 1px solid #333;
     margin-bottom: 30px;
@@ -780,7 +740,6 @@ footer {
     border-bottom: 1px solid #c5a059;
 }
 
-/* --- FAQJA ABOUT US (RRETH NESH) --- */
 .about-container {
     max-width: 900px;
     margin: 50px auto;
@@ -824,11 +783,9 @@ footer {
 
 
 
-/* =========================
-   MOBILE MENU STYLES
-   ========================= */
+
 .hamburger {
-    display: none; /* Fshihet ne desktop */
+    display: none; 
     font-size: 30px;
     cursor: pointer;
     color: #c5a059;
@@ -837,24 +794,24 @@ footer {
 
 @media (max-width: 768px) {
     .hamburger {
-        display: block; /* Shfaqet ne telefon */
+        display: block; 
         text-align: right;
         margin-right: 20px;
     }
 
     .main-nav ul {
-        display: none; /* Fshihet lista normalisht */
+        display: none; 
         flex-direction: column;
         background-color: rgba(4, 18, 37, 0.95);
         width: 100%;
         position: absolute;
-        top: 180px; /* Rregulloje sipas lartesise se headerit */
+        top: 180px; 
         left: 0;
         z-index: 100;
     }
 
     .main-nav ul.show {
-        display: flex; /* Shfaqet kur klikohet hamburgeri */
+        display: flex;
     }
 
     .main-nav ul li {
@@ -864,198 +821,15 @@ footer {
 }
 
 #contLog {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh; /* E vendos ne mes te ekranit vertikalisht */
-    padding: 20px;
-}
-
-#loginForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #34495e; 
-    padding: 35px 50px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); 
-    width: 320px; 
-    max-width: 90%;
-}
-
-/* Stilimi i Logos */
-#loginLogo{
-    width: 100px; 
-    height: 100px;
-    margin-bottom: 25px;
-    border-radius: 50%; /* Nëse logoja është katrore */
-    object-fit: cover;
-}
-
-/* Stilimi i Titullit */
-#loginTitle {
-    color: #ecf0f1; 
-    margin-bottom: 25px;
-    text-align: center;
-    font-size: 26px;
-    font-weight: 600;
-}
-
-/* Stilimi i Fushave të Inputit */
-#loginForm input {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 15px;
-    border: 1px solid #7f8c8d;
-    border-radius: 5px;
-    box-sizing: border-box; 
-    background-color: #ecf0f1; 
-    color: #2c3e50;
-    font-size: 16px;
-}
-
-#loginForm input:focus{
-    border-color: #3498db; 
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-}
-
-/* Stilimi i Butonit (Përdor ID të ndryshme për të pasur stilime specifike) */
-#loginButton{
-    width: 100%;
-    padding: 12px;
-    background-color: #2ecc71; /* Butoni Login/Register */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-
-#loginButton:hover:hover {
-    background-color: #27ae60; 
-}
-
-/* Stilimi i Linkut/Tekstit për Regjistrim */
-#registerLink {
-    color: #ecf0f1; 
-    margin-top: 25px;
-    font-size: 15px;
-}
-
-#registerLink a {
-    color: #3498db; /* Ngjyra e linkut */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#registerLink a:hover {
-    text-decoration: underline;
-}
-
-/* Klasë ndihmëse për fshehje vizuale të Label-it */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
     background-image: url('24022249_6837004.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    /* Për të qendërzuar përdorim fleksibilitetin */
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
 }
 
-#Hyerja_1 {
-    display: flex; 
-    flex-direction: column;
-    width: 290px;
-    height: auto; 
-    border: 1px solid dodgerblue;
-    padding: 4%;
-    background-color: rgba(0, 0, 44, 0.466);
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shtuar hije për lehtësi vizuale */
-}
-
-#Shenja_1 {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 10px auto; 
-}
-
-/* Titulli (ID Login_1) */
-#Login_1 {
-    color: aqua;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-/* Stili i inputit të username (ID useri_1) */
-#useri_1 {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.822);
-    color: black;
-    padding: 9px;
-    border: none; /* Ndryshuar nga 1 në none */
-    border-radius: 10px;
-    margin-top: 5px; /* Hapësirë lart */
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-/* Stili i inputit të fjalëkalimit (ID passi_1) */
-#passi_1 {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.822);
-    color: black;
-    padding: 9px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 5px; /* Hapësirë lart */
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-/* Stili i butonit (ID butoni_1) */
-#butoni_1 {
-    background-color: rgba(255, 255, 255, 0.212);
-    color: aqua;
-    padding: 8px;
-    border: 1px solid aqua; /* Përmirësuar nga 1 në 1px solid */
-    cursor: pointer;
-    margin-top: 7px;
-    border-radius: 15px;
-}
-
-/* Stili i regjistrimit (ID register1_1) */
-#register1_1 {
-    color: aqua;
-    text-align: center;
-    margin-top: 15px;
-    cursor: pointer;
-}
-
-/* Stili i labelave (etiketave) */
-#Hyerja_1 label {
-    color: white;
-    font-size: 0.9em;
-    margin-top: 5px;
-}
-
-/* Heqim linjat e ndarjes së rreshtit <br> */
-#Hyerja_1 br {
-    display: none;
-}

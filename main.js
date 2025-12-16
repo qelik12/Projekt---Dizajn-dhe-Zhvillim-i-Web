@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buyButtons.forEach(button => {
         button.addEventListener('click', () => {
-            alert("Produkti/Bileta u shtua në shportë me sukses!");
+            alert("Per te porositur Bileten/Produktin duhet te jeni regjistruar!");
         });
     });
 
