@@ -323,11 +323,11 @@ header {
 }
 
 .main-footer {
-    background-color: #1a242f; /* Ngjyrë shumë e errët, pothuajse e zezë */
-    color: #ecf0f1; /* Tekst i bardhë */
+    background-color: #1a242f; 
+    color: #ecf0f1; 
     padding: 40px 0 20px 0;
     font-family: 'Roboto', sans-serif;
-    border-top: 3px solid #c5a059; /* Vijë e artë lart */
+    border-top: 3px solid #c5a059; 
 }
 
 .footer-container {
@@ -335,25 +335,24 @@ header {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    justify-content: space-between; /* Ndarja e hapësirës mes kolonave */
-    flex-wrap: wrap; /* Lejon kolonat të kalojnë në rresht tjetër në ekrane të vogla */
+    justify-content: space-between; 
+    flex-wrap: wrap; 
 }
 
 .footer-column {
-    flex: 1; /* Lejon kolonat të zënë hapësirë në mënyrë të barabartë */
-    min-width: 250px; /* Gjerësia minimale para se të thyhen */
+    flex: 1; 
+    min-width: 250px; 
     margin-bottom: 20px;
     padding-right: 20px;
 }
 
 .footer-column h3 {
-    color: #c5a059; /* Titujt me ngjyrë të artë */
+    color: #c5a059;
     font-size: 18px;
     margin-bottom: 15px;
     font-family: 'Oswald', sans-serif;
 }
 
-/* Kolona e Logove */
 .footer-logo {
     width: 60px;
     height: 60px;
@@ -371,7 +370,6 @@ header {
     font-size: 12px;
 }
 
-/* Linqet e Shpejta dhe Kontakti */
 .quick-links ul {
     list-style: none;
     padding: 0;
@@ -388,7 +386,7 @@ header {
 }
 
 .quick-links a:hover, .contact-info a:hover {
-    color: #c5a059; /* Efekt i artë kur kalon mausi */
+    color: #c5a059;
     text-decoration: underline;
 }
 
@@ -397,11 +395,10 @@ header {
     font-size: 14px;
 }
 
-/* Mediat Sociale */
 .social-links {
     margin-top: 15px;
     display: flex;
-    gap: 15px; /* Hapësirë mes ikonave */
+    gap: 15px; 
 }
 
 .social-links img {
@@ -416,10 +413,9 @@ header {
 }
 
 
-/* Përgjegjshmëria (Mobile View) */
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column; /* Kolonat bëhen rreshta në ekranet e vogla */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
     }
@@ -428,7 +424,7 @@ header {
         padding-right: 0;
     }
     .social-links {
-        justify-content: center; /* Qendërson ikonat e mediave sociale */
+        justify-content: center; 
     }
 }
 
@@ -935,17 +931,15 @@ header {
 }
 
 
-/* ABOUT US - GALERIA  */
 .history-gallery-section {
-    grid-column: 1 / -1; /* Zë të gjithë gjerësinë në layout-in tonë Grid */
-    margin-top: 30px; /* Hapësirë nga seksioni i mësipërm */
+    grid-column: 1 / -1; 
+    margin-top: 30px; 
     padding: 20px 0;
 }
 
-/* Titulli i galerisë (përshtatet me stilin 'OUR HISTORY & MISSION') */
 #galleryTitle {
     font-family: 'Oswald', sans-serif;
-    color: #c5a059; /* Ngjyra e artë */
+    color: #c5a059; 
     text-transform: uppercase;
     font-size: 36px;
     letter-spacing: 1px;
@@ -953,44 +947,39 @@ header {
     text-align: center;
 }
 
-/* Grid-i i fotove */
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Krijon kolona të përgjegjshme */
-    gap: 20px; /* Hapësirë midis fotove */
-    justify-items: center; /* Qendërson çdo foto horizontalisht */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    justify-items: center; /
 }
 
-/* Stilimi i kutisë së çdo fotoje */
 .photo-item {
-    background-color: #34495e; /* Ngjyra e errët e sfondit të kutisë */
-    border: 1px solid #7f8c8d; /* Korniza e errët e hershme */
-    border-radius: 8px; /* Rumbullakosja e qosheve */
-    overflow: hidden; /* Fsheh pjesët jashtë rrethit */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Hije e lehtë */
-    transition: transform 0.3s, box-shadow 0.3s; /* Efekti i tranzicionit */
+    background-color: #34495e; 
+    border: 1px solid #7f8c8d; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s, box-shadow 0.3s; 
 }
 
-/* Efekti kur kalon mausi mbi çdo foto */
 .photo-item:hover {
-    transform: scale(1.05); /* Zmadhohet pak */
-    box-shadow: 0 0 15px #c5a059; /* Hije e artë e fortë */
-    border-color: #c5a059; /* Korniza bëhet e artë */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #c5a059; 
+    border-color: #c5a059; 
 }
 
-/* Stilimi i fotove vetë */
 .photo-item img {
-    width: 100%; /* Zë gjerësinë e plotë të kutisë */
-    height: 200px; /* Lartësia e fiksuar */
-    object-fit: cover; /* Pritet fotoja që të përshtatet saktë në kutinë */
-    border-bottom: 1px solid #c5a059; /* Vijë e artë në fund të fotos */
+    width: 100%; 
+    height: 200px;
+    object-fit: cover; 
+    border-bottom: 1px solid #c5a059; 
 }
 
-/* Stilimi i mbishkrimit të fotos */
 .photo-caption {
     font-family: 'Roboto', sans-serif;
-    color: white; /* Teksti i bardhë */
+    color: white; 
     font-size: 14px;
-    padding: 10px 15px; /* Hapësirë rreth tekstit */
+    padding: 10px 15px; 
     text-align: center;
 }
