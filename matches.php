@@ -2,14 +2,13 @@
 <html lang="sq">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lion Pride F.C. - Official Home</title>
+    <title>Matches - Lion Pride F.C.</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="main-background"></div>
+    <div class="matches-background"></div>
 
     <header>
         <div class="top-bar">
@@ -17,7 +16,7 @@
             <a href="register.html">Register</a>
 
             <div class="search-container">
-              <input type="text" id="searchInput" placeholder="Kërko...">
+              <input name="searchMatch" type="text" id="searchInput" placeholder="Kërko...">
               <button id="searchBtn">🔍</button>
            </div>
         </div>
@@ -32,55 +31,59 @@
         <nav class="main-nav">
             <div class="hamburger">☰</div>
             <ul>
-                <li><a href="index.html" class="active">HOME</a></li>
-                <li><a href="squad.html">TEAM</a></li>
-                <li><a href="news.html">NEWS</a></li>
-                <li><a href="matches.html">MATCHES</a></li>
+                <li><a href="index.html" >HOME</a></li>
+                <li><a href="squad.html" >TEAM</a></li> 
+                <li><a href="news.html" >NEWS</a></li> 
+                <li><a href="matches.html" class="active">MATCHES</a></li>
                 <li><a href="shop.html">SHOP</a></li>
                 <li><a href="aboutus.html">ABOUT US</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
+    <div class="page-header">
+        <h2>UPCOMING FIXTURES</h2>
+    </div>
+
+    <main class="matches-container">
         
-        <div class="hero-grid">
-            
-            <div class="main-featured-card">
-                <img src="images/Gemini_Generated_Image_hnfj67hnfj67hnfj.png" alt="Lojtarët në fushë">
-                <div class="card-overlay">
-                    <span class="tag">MATCH REPORT</span>
-                    <h2>FITORE E MADHE NË SHTËPI KUNDËR RIVALËVE</h2>
-                    <a href="#" class="read-more">LEXO MË SHUMË &rarr;</a>
-                </div>
+        <div class="match-row">
+            <div class="match-teams">
+                <span>LION PRIDE</span>
+                <span class="vs-badge">VS</span>
+                <span>BARCELONA</span>
             </div>
-
-            <div class="side-news-list">
-                <h3>LATEST NEWS</h3>
-                
-                <div class="side-card">
-                    <img src="images/text-lines.png" alt="Lajm i vogel">
-                    <div class="side-info">
-                        <span class="date">28 NËNTOR</span>
-                        <h4>Transferimet e reja të sezonit</h4>
-                    </div>
-                </div>
-
-                <div class="side-card">
-                    <img src="images/text-lines.png" alt="Lajm i vogel">
-                    <div class="side-info">
-                        <span class="date">27 NËNTOR</span>
-                        <h4>Intervistë ekskluzive me kapitenin</h4>
-                    </div>
-                </div>
-
-                <div class="side-card schedule-card">
-                    <h4>NDESHJA E RADHËS</h4>
-                    <p>Lion Pride vs. City FC</p>
-                    <button class="btn-small">BLEJ BILETA</button>
-                </div>
+            <div class="match-info">
+                <span class="match-date">12 DHJETOR | 21:00</span>
+                <span class="match-stadium">Santiago Bernabéu</span>
             </div>
+            <button class="btn-ticket">BUY TICKETS</button>
+        </div>
 
+        <div class="match-row">
+            <div class="match-teams">
+                <span>LIVERPOOL</span>
+                <span class="vs-badge">VS</span>
+                <span>LION PRIDE</span>
+            </div>
+            <div class="match-info">
+                <span class="match-date">18 DHJETOR | 20:45</span>
+                <span class="match-stadium">Anfield</span>
+            </div>
+            <button class="btn-ticket">AWAY TICKETS</button>
+        </div>
+
+        <div class="match-row">
+            <div class="match-teams">
+                <span>LION PRIDE</span>
+                <span class="vs-badge">VS</span>
+                <span>AC MILAN</span>
+            </div>
+            <div class="match-info">
+                <span class="match-date">24 DHJETOR | 19:00</span>
+                <span class="match-stadium">Santiago Bernabéu</span>
+            </div>
+            <button class="btn-ticket">BUY TICKETS</button>
         </div>
 
     </main>
@@ -119,7 +122,7 @@
 
         </div>
     </footer>
-
-    <script src="main.js"></script> 
+    
+    <script src="main.js"></script>
 </body>
 </html>

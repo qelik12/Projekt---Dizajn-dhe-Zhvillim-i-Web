@@ -15,7 +15,7 @@
             <a href="register.html">Register</a>
 
             <div class="search-container">
-              <input type="text" id="searchInput" placeholder="Kërko...">
+              <input name="searchShop" type="text" id="searchInput" placeholder="Kërko...">
               <button id="searchBtn">🔍</button>
            </div>
         </div>

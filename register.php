@@ -1,3 +1,29 @@
+<?php
+include_once 'config/Database.php';
+include_once 'models/User.php';
+
+$database = new Database();
+$db = $database->getConnection();
+$user = new User($db);
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if($user->register($name, $surname, $email, $username, $password)) {
+        echo "<script>alert('U regjistruat me sukses!'); window.location.href='login.php';</script>";
+    } else {
+        echo "<script>alert('Gabim gjatë regjistrimit.');</script>";
+    }
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="sq">
 <head>
@@ -26,7 +52,7 @@
             <h2>BASHKOHU ME SQUADRËN</h2>
             <p>Krijo llogarinë tënde zyrtare</p>
 
-            <form id="registerForm" onsubmit="return validateRegister(event)"> <div class="form-group">
+            <form method="POST" id="registerForm" onsubmit="return validateRegister(event)"> <div class="form-group">
                     <label for="fullname">Emri i Plotë</label>
                     <input type="text" id="fullname" name="fullname" placeholder="Emri dhe Mbiemri">
                     <span class="error-msg" id="nameError"></span>
@@ -51,7 +77,7 @@
                 </div>
 
                 <div class="form-check">
-                    <input type="checkbox" id="terms">
+                    <input type="checkbox" id="terms" name="terms">
                     <label for="terms">Pranoj Termat dhe Kushtet</label>
                 </div>
 

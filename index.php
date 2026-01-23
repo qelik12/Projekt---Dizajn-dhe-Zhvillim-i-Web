@@ -2,13 +2,14 @@
 <html lang="sq">
 <head>
     <meta charset="UTF-8">
-    <title>News - Lion Pride F.C.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lion Pride F.C. - Official Home</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="news-background"></div>
+    <div class="main-background"></div>
 
     <header>
         <div class="top-bar">
@@ -16,51 +17,72 @@
             <a href="register.html">Register</a>
 
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Kërko...">
-                <button id="searchBtn">🔍</button>
-            </div>
+              <input name="search" type="text" id="searchInput" placeholder="Kërko...">
+              <button id="searchBtn">🔍</button>
+           </div>
         </div>
 
         <div class="brand-center">
-             <h1><a href="index.html" style="color: white; text-decoration: none;">LION PRIDE F.C.</a></h1>
+            <div class="logo-container">
+                <img src="images/Logo.png" alt="Logo" class="main-logo">
+            </div>
+            <h1>LION PRIDE F.C.</h1>
         </div>
 
         <nav class="main-nav">
             <div class="hamburger">☰</div>
             <ul>
-                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html" class="active">HOME</a></li>
                 <li><a href="squad.html">TEAM</a></li>
-                <li><a href="news.html" class="active">NEWS</a></li>
+                <li><a href="news.html">NEWS</a></li>
                 <li><a href="matches.html">MATCHES</a></li>
                 <li><a href="shop.html">SHOP</a></li>
-                <li><a href="aboutus.html">ABOUT US</a></li> </ul>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+            </ul>
         </nav>
     </header>
 
-    <div class="page-header">
-        <h2>CLUB NEWS</h2>
-    </div>
-
-    <main class="news-container">
-        <article class="news-item">
-            <img src="images/training.jpg" alt="Lajmi 1"> 
-            <div class="news-content">
-                <span class="news-meta">10 DHJETOR 2024 | CLUB OFFICIAL</span>
-                <h3>TRAJNIMI I FUNDIT PARA DERBIT TË MADH</h3>
-                <p class="news-excerpt">Skuadra ka përfunduar seancën e fundit stërvitore në qendrën sportive. Trajneri është shprehur optimist për gjendjen e lojtarëve...</p>
-                <a href="#" class="read-more-link">LEXO MË SHUMË &rarr;</a>
+    <main class="container">
+        
+        <div class="hero-grid">
+            
+            <div class="main-featured-card">
+                <img src="images/Gemini_Generated_Image_hnfj67hnfj67hnfj.png" alt="Lojtarët në fushë">
+                <div class="card-overlay">
+                    <span class="tag">MATCH REPORT</span>
+                    <h2>FITORE E MADHE NË SHTËPI KUNDËR RIVALËVE</h2>
+                    <a href="#" class="read-more">LEXO MË SHUMË &rarr;</a>
+                </div>
             </div>
-        </article>
 
-        <article class="news-item">
-            <img src="images/contrat.jpg" alt="Lajmi 2">
-            <div class="news-content">
-                <span class="news-meta">08 DHJETOR 2024 | TRANSFERS</span>
-                <h3>ZYRTARE: SHTYLLA E MBROJTJES RINOVON KONTRATËN</h3>
-                <p class="news-excerpt">Klubi është i lumtur të njoftojë se mbrojtësi ynë kryesor ka nënshkruar një kontratë të re 3 vjeçare, duke hedhur poshtë zërat për largim...</p>
-                <a href="#" class="read-more-link">LEXO MË SHUMË &rarr;</a>
+            <div class="side-news-list">
+                <h3>LATEST NEWS</h3>
+                
+                <div class="side-card">
+                    <img src="images/text-lines.png" alt="Lajm i vogel">
+                    <div class="side-info">
+                        <span class="date">28 NËNTOR</span>
+                        <h4>Transferimet e reja të sezonit</h4>
+                    </div>
+                </div>
+
+                <div class="side-card">
+                    <img src="images/text-lines.png" alt="Lajm i vogel">
+                    <div class="side-info">
+                        <span class="date">27 NËNTOR</span>
+                        <h4>Intervistë ekskluzive me kapitenin</h4>
+                    </div>
+                </div>
+
+                <div class="side-card schedule-card">
+                    <h4>NDESHJA E RADHËS</h4>
+                    <p>Lion Pride vs. City FC</p>
+                    <button class="btn-small">BLEJ BILETA</button>
+                </div>
             </div>
-        </article>
+
+        </div>
+
     </main>
 
     <footer class="main-footer">
@@ -98,6 +120,6 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js"></script> 
 </body>
 </html>
