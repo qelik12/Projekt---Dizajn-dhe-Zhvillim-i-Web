@@ -1,3 +1,38 @@
+<?php
+session_start(); 
+require_once 'config/Database.php';
+require_once 'models/User.php';
+
+$database = new Database();
+$db = $database->getConnection();
+$user = new User($db);
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $userData = $user->login($username, $password);
+
+    if ($userData) {
+        $_SESSION['user_id'] = $userData['id'];
+        $_SESSION['username'] = $userData['username'];
+        $_SESSION['role'] = $userData['role'];
+
+        if ($userData['role'] == 'admin') {
+            header("Location: admin_dashboard.php");
+        } else {
+            header("Location: index.php");
+        }
+    } else {
+        echo "<script>alert('Username ose Password gabim!');</script>";
+    }
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="sq">
 <head>
@@ -14,9 +49,9 @@
     <header>
         <div class="brand-center">
             <div class="logo-container">
-                <img src="../images/Logo.png" alt="Logo" class="main-logo">
+                <img src="images/Logo.png" alt="Logo" class="main-logo">
             </div>
-            <h1><a href="../index.html" style="color: white; text-decoration: none;">LION PRIDE F.C.</a></h1>
+            <h1><a href="index.php" style="color: white; text-decoration: none;">LION PRIDE F.C.</a></h1>
         </div>
     </header>
 
@@ -26,7 +61,7 @@
             <h2>Hyr në Llogari</h2>
             <p>Përdorni kredencialet tuaja zyrtare</p>
 
-            <form method="POST" id="loginForm" onsubmit="return validateLogin(event)">
+            <form method="POST" id="loginForm">
                
                 <div class="form-group">
                     <label for="username">Emri i Përdoruesit</label>
@@ -43,7 +78,7 @@
                 <button type="submit" class="btn-gold-full">HYR</button>
 
                 <div class="form-footer">
-                    <p>Nuk keni llogari? <a href="register.html">Regjistrohuni këtu</a></p>
+                    <p>Nuk keni llogari? <a href="register.php">Regjistrohuni këtu</a></p>
                     <p><a href="#" class="forgot-link">Kam harruar Fjalëkalimin</a></p>
                 </div>
             </form>
@@ -63,10 +98,10 @@
             <div class="footer-column quick-links">
                 <h3>LINQET E SHPEJTA</h3>
                 <ul>
-                    <li><a href="index.html">Ballina</a></li>
-                    <li><a href="squad.html">Skuadra</a></li>
-                    <li><a href="shop.html">Bli Tani</a></li>
-                    <li><a href="news.html">Lajmet e Fundit</a></li>
+                    <li><a href="index.php">Ballina</a></li>
+                    <li><a href="squad.php">Skuadra</a></li>
+                    <li><a href="shop.php">Bli Tani</a></li>
+                    <li><a href="news.php">Lajmet e Fundit</a></li>
                 </ul>
             </div>
 
