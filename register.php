@@ -7,16 +7,25 @@ $db = $database->getConnection();
 $user = new User($db);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
-    $surname = $_POST['surname'];
+    $fullname = trim($_POST['fullname']); 
     $email = $_POST['email'];
-    $username = $_POST['username'];
     $password = $_POST['password'];
+    $confirm_password = $_POST['confirm-password']; 
+    $username = $_POST['username']; 
 
-    if($user->register($name, $surname, $email, $username, $password)) {
-        echo "<script>alert('U regjistruat me sukses!'); window.location.href='login.php';</script>";
+    if ($password !== $confirm_password) {
+        echo "<script>alert('Fjalëkalimet nuk përputhen!'); window.history.back();</script>";
+        exit();
+    }
+
+    $parts = explode(" ", $fullname);
+    $name = $parts[0]; 
+    $surname = isset($parts[1]) ? implode(" ", array_slice($parts, 1)) : ""; 
+
+    if ($user->register($name, $surname, $email, $username, $password)) {
+        echo "<script>alert('Regjistrimi u krye!'); window.location.href='LoginForm.php';</script>";
     } else {
-        echo "<script>alert('Gabim gjatë regjistrimit.');</script>";
+        echo "<script>alert('Gabim! Ky Username ose Email mund të jetë i zënë.');</script>";
     }
 }
 ?>
@@ -40,9 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <header>
         <div class="brand-center">
             <div class="logo-container">
-                <img src="../images/Logo.png" alt="Logo" class="main-logo">
+                <img src="images/Logo.png" alt="Logo" class="main-logo">
             </div>
-            <h1><a href="../index.html" style="color: white; text-decoration: none;">LION PRIDE F.C.</a></h1>
+            <h1><a href="index.php" style="color: white; text-decoration: none;">LION PRIDE F.C.</a></h1>
         </div>
     </header>
 
@@ -52,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2>BASHKOHU ME SQUADRËN</h2>
             <p>Krijo llogarinë tënde zyrtare</p>
 
-            <form method="POST" id="registerForm" onsubmit="return validateRegister(event)"> <div class="form-group">
+            <form method="POST" id="registerForm"> <div class="form-group">
                     <label for="fullname">Emri i Plotë</label>
                     <input type="text" id="fullname" name="fullname" placeholder="Emri dhe Mbiemri">
                     <span class="error-msg" id="nameError"></span>
@@ -62,6 +71,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <label for="email">E-mail Adresa</label>
                     <input type="email" id="email" name="email" placeholder="example@email.com">
                     <span class="error-msg" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Emri i Përdoruesit</label>
+                    <input type="text" id="username" name="username" placeholder="Emri i përdoruesit">
+                    <span class="error-msg" id="usernameError"></span>
                 </div>
 
                 <div class="form-group">
@@ -84,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <button type="submit" class="btn-gold-full">REGJISTROHU</button>
 
                 <div class="form-footer">
-                    <p>Ke tashmë një llogari? <a href="LoginForm.html">Hyni këtu</a></p>
+                    <p>Ke tashmë një llogari? <a href="LoginForm.php">Hyni këtu</a></p>
                 </div>
             </form>
         </div>
@@ -103,10 +118,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="footer-column quick-links">
                 <h3>LINQET E SHPEJTA</h3>
                 <ul>
-                    <li><a href="index.html">Ballina</a></li>
-                    <li><a href="squad.html">Skuadra</a></li>
-                    <li><a href="shop.html">Bli Tani</a></li>
-                    <li><a href="news.html">Lajmet e Fundit</a></li>
+                    <li><a href="index.php">Ballina</a></li>
+                    <li><a href="squad.php">Skuadra</a></li>
+                    <li><a href="shop.php">Bli Tani</a></li>
+                    <li><a href="news.php">Lajmet e Fundit</a></li>
                 </ul>
             </div>
 
