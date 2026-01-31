@@ -12,8 +12,8 @@
 
     <header>
         <div class="top-bar">
-            <a href="LoginForm.html">Login</a>
-            <a href="register.html">Register</a>
+            <a href="LoginForm.php">Login</a>
+            <a href="register.php">Register</a>
 
             <div class="search-container">
               <input type="text" id="searchInput" placeholder="Kërko...">
@@ -31,12 +31,12 @@
         <nav class="main-nav">
             <div class="hamburger">☰</div>
             <ul>
-                <li><a href="index.html" >HOME</a></li>
-                <li><a href="squad.html" >TEAM</a></li> 
-                <li><a href="news.html">NEWS</a></li> 
-                <li><a href="matches.html">MATCHES</a></li>
-                <li><a href="shop.html">SHOP</a></li>
-                <li><a href="aboutus.html" class="active">ABOUT US</a></li>
+                <li><a href="index.php" >HOME</a></li>
+                <li><a href="squad.php" >TEAM</a></li> 
+                <li><a href="news.php">NEWS</a></li> 
+                <li><a href="matches.php">MATCHES</a></li>
+                <li><a href="shop.php">SHOP</a></li>
+                <li><a href="aboutus.php" class="active">ABOUT US</a></li>
             </ul>
         </nav>
     </header>
@@ -118,10 +118,10 @@
             <div class="footer-column quick-links">
                 <h3>LINQET E SHPEJTA</h3>
                 <ul>
-                    <li><a href="index.html">Ballina</a></li>
-                    <li><a href="squad.html">Skuadra</a></li>
-                    <li><a href="shop.html">Bli Tani</a></li>
-                    <li><a href="news.html">Lajmet e Fundit</a></li>
+                    <li><a href="index.php">Ballina</a></li>
+                    <li><a href="squad.php">Skuadra</a></li>
+                    <li><a href="shop.php">Bli Tani</a></li>
+                    <li><a href="news.php">Lajmet e Fundit</a></li>
                 </ul>
             </div>
 

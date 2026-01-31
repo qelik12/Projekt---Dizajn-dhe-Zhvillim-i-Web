@@ -13,11 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const buyButtons = document.querySelectorAll('.btn-buy, .btn-ticket');
 
-    buyButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            alert("Per te porositur Bileten/Produktin duhet te jeni regjistruar!");
-        });
-    });
+       buyButtons.forEach(button => {
+          button.addEventListener('click', (e) => {
+              if (!isLoggedIn) {
+                  e.preventDefault(); 
+                  alert("Për të porositur duhet të jeni të kyçur!");
+                  window.location.href = 'LoginForm.php';
+              }
+          });
+      });
 
 
     
@@ -55,9 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!isValid) {
                 e.preventDefault();
-            } else {
-                alert("Regjistrimi u krye me sukses!");
-            }
+            } 
         });
     }
 
@@ -169,16 +171,16 @@ function performSearch() {
     if (query === "") return;
 
     if (query.includes('shop') || query.includes('fanella') || query.includes('blej')) {
-        window.location.href = 'shop.html'; 
+        window.location.href = 'shop.php'; 
     } 
     else if (query.includes('squad') || query.includes('ekipi') || query.includes('lojtaret')) {
-        window.location.href = 'squad.html'; 
+        window.location.href = 'squad.php'; 
     }
     else if (query.includes('lajme') || query.includes('news')) {
-        window.location.href = 'news.html';
+        window.location.href = 'news.php';
     }
     else if (query.includes('kontakt') || query.includes('rreth')) {
-        window.location.href = 'aboutus.html';
+        window.location.href = 'aboutus.php';
     }
     else {
         alert("Nuk u gjet asgjë për: " + query);

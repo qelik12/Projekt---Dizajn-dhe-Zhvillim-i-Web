@@ -11,8 +11,8 @@
 
     <header>
         <div class="top-bar">
-            <a href="LoginForm.html">Login</a>
-            <a href="register.html">Register</a>
+            <a href="LoginForm.php">Login</a>
+            <a href="register.php">Register</a>
 
             <div class="search-container">
               <input name="searchShop" type="text" id="searchInput" placeholder="Kërko...">
@@ -30,12 +30,12 @@
         <nav class="main-nav">
             <div class="hamburger">☰</div>
             <ul>
-                <li><a href="index.html" >HOME</a></li>
-                <li><a href="squad.html" >TEAM</a></li> 
-                <li><a href="news.html">NEWS</a></li> 
-                <li><a href="matches.html">MATCHES</a></li>
-                <li><a href="shop.html" class="active">SHOP</a></li> 
-                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="index.php" >HOME</a></li>
+                <li><a href="squad.php" >TEAM</a></li> 
+                <li><a href="news.php">NEWS</a></li> 
+                <li><a href="matches.php">MATCHES</a></li>
+                <li><a href="shop.php" class="active">SHOP</a></li> 
+                <li><a href="aboutus.php">ABOUT US</a></li>
             </ul>
         </nav>
     </header>
@@ -47,21 +47,21 @@
     <main>
         <div class="shop-grid">
             <div class="product-card">
-                <img src="../images/home-jersey.jpg" alt="Fanella Home" class="product-image">
+                <img src="images/home-jersey.jpg" alt="Fanella Home" class="product-image">
                 <h3 class="product-title">HOME KIT 24/25</h3>
                 <span class="product-price">99.00 €</span>
                 <button class="btn-buy">SHTO NË SHPORTË</button>
             </div>
 
             <div class="product-card">
-                <img src="../images/away-jersey.jpg" alt="Fanella Away" class="product-image">
+                <img src="images/away-jersey.jpg" alt="Fanella Away" class="product-image">
                 <h3 class="product-title">AWAY KIT 24/25</h3>
                 <span class="product-price">89.00 €</span>
                 <button class="btn-buy">SHTO NË SHPORTË</button>
             </div>
 
             <div class="product-card">
-                <img src="../images/third-jersey.jpg" alt="Training Kit" class="product-image">
+                <img src="images/third-jersey.jpg" alt="Training Kit" class="product-image">
                 <h3 class="product-title">TRAINING JERSEY</h3>
                 <span class="product-price">55.00 €</span>
                 <button class="btn-buy">SHTO NË SHPORTË</button>
@@ -81,10 +81,10 @@
             <div class="footer-column quick-links">
                 <h3>LINQET E SHPEJTA</h3>
                 <ul>
-                    <li><a href="index.html">Ballina</a></li>
-                    <li><a href="squad.html">Skuadra</a></li>
-                    <li><a href="shop.html">Bli Tani</a></li>
-                    <li><a href="news.html">Lajmet e Fundit</a></li>
+                    <li><a href="index.php">Ballina</a></li>
+                    <li><a href="squad.php">Skuadra</a></li>
+                    <li><a href="shop.php">Bli Tani</a></li>
+                    <li><a href="news.php">Lajmet e Fundit</a></li>
                 </ul>
             </div>
 

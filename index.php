@@ -1,3 +1,10 @@
+<?php session_start(); ?>
+
+<script>
+    const isLoggedIn = <?php echo isset($_SESSION['user_id']) ? 'true' : 'false'; ?>;
+</script>
+
+
 <!DOCTYPE html>
 <html lang="sq">
 <head>
@@ -12,35 +19,47 @@
     <div class="main-background"></div>
 
     <header>
-        <div class="top-bar">
-            <a href="LoginForm.html">Login</a>
-            <a href="register.html">Register</a>
+    <div class="top-bar">
+        <?php if (isset($_SESSION['user_id'])): ?>
+            <span class="user-welcome">Përshëndetje, <strong><?php echo $_SESSION['username']; ?></strong></span>
+            
+            <?php if ($_SESSION['role'] == 'admin'): ?>
+                <a href="admin_dashboard.php" style="color: #ffcc00; margin-left: 10px; font-weight: bold;">Admin Panel</a>
+            <?php endif; ?>
+            
+            <a href="logout.php" style="margin-left: 15px; color: #ff4d4d;">Logout</a>
 
-            <div class="search-container">
-              <input name="search" type="text" id="searchInput" placeholder="Kërko...">
-              <button id="searchBtn">🔍</button>
-           </div>
+        <?php else: ?>
+            <a href="LoginForm.php">Login</a>
+            <a href="register.php">Register</a>
+        <?php endif; ?>
+
+        <div class="search-container">
+            <input name="search" type="text" id="searchInput" placeholder="Kërko...">
+            <button id="searchBtn">🔍</button>
         </div>
+    </div>
 
-        <div class="brand-center">
-            <div class="logo-container">
-                <img src="images/Logo.png" alt="Logo" class="main-logo">
-            </div>
-            <h1>LION PRIDE F.C.</h1>
+    <div class="brand-center">
+        <div class="logo-container">
+            <img src="images/Logo.png" alt="Logo" class="main-logo">
         </div>
+        <h1>LION PRIDE F.C.</h1>
+    </div>
 
-        <nav class="main-nav">
-            <div class="hamburger">☰</div>
-            <ul>
-                <li><a href="index.html" class="active">HOME</a></li>
-                <li><a href="squad.html">TEAM</a></li>
-                <li><a href="news.html">NEWS</a></li>
-                <li><a href="matches.html">MATCHES</a></li>
-                <li><a href="shop.html">SHOP</a></li>
-                <li><a href="aboutus.html">ABOUT US</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="main-nav">
+        <div class="hamburger">☰</div>
+        <ul>
+            <li><a href="index.php" class="active">HOME</a></li>
+            <li><a href="squad.php">TEAM</a></li>
+            <li><a href="news.php">NEWS</a></li>
+            <li><a href="matches.php">MATCHES</a></li>
+            <li><a href="shop.php">SHOP</a></li>
+            <li><a href="aboutus.php">ABOUT US</a></li>
+
+        </ul>
+    </nav>
+</header>
 
     <main class="container">
         
@@ -97,10 +116,10 @@
             <div class="footer-column quick-links">
                 <h3>LINQET E SHPEJTA</h3>
                 <ul>
-                    <li><a href="index.html">Ballina</a></li>
-                    <li><a href="squad.html">Skuadra</a></li>
-                    <li><a href="shop.html">Bli Tani</a></li>
-                    <li><a href="news.html">Lajmet e Fundit</a></li>
+                    <li><a href="index.php">Ballina</a></li>
+                    <li><a href="squad.php">Skuadra</a></li>
+                    <li><a href="shop.php">Bli Tani</a></li>
+                    <li><a href="news.php">Lajmet e Fundit</a></li>
                 </ul>
             </div>
 
