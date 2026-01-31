@@ -81,7 +81,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <p>Nuk keni llogari? <a href="register.php">Regjistrohuni këtu</a></p>
                     <p><a href="#" class="forgot-link">Kam harruar Fjalëkalimin</a></p>
                 </div>
+                
             </form>
+
         </div>
 
     </main>
