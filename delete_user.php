@@ -14,6 +14,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin' && isset($_GET['id
     if ($stmt->execute()) {
         header("Location: admin_dashboard.php");
     }
+    
 } else {
     echo "Nuk keni autorizim!";
 }

@@ -35,6 +35,7 @@ class User {
             return $user;
         }
         return false;
+        
     }
 }
 ?>
