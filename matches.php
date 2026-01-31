@@ -19,6 +19,7 @@
               <input name="searchMatch" type="text" id="searchInput" placeholder="Kërko...">
               <button id="searchBtn">🔍</button>
            </div>
+
         </div>
 
         <div class="brand-center">
@@ -39,6 +40,7 @@
                 <li><a href="aboutus.php">ABOUT US</a></li>
             </ul>
         </nav>
+
     </header>
 
     <div class="page-header">
@@ -121,6 +123,7 @@
             </div>
 
         </div>
+        
     </footer>
     
     <script src="main.js"></script>

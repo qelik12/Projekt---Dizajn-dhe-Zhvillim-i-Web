@@ -102,6 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <p>Ke tashmë një llogari? <a href="LoginForm.php">Hyni këtu</a></p>
                 </div>
             </form>
+
         </div>
 
     </main>
@@ -136,6 +137,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
                     <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
                 </div>
+                
             </div>
 
         </div>

@@ -82,6 +82,7 @@
                     <h3 class="player-name">RRON MEHMETI</h3>
                     <p class="player-position">Defender</p>
                 </div>
+                
             </div>
 
             <div class="player-card">
@@ -91,6 +92,7 @@
                     <h3 class="player-name">Lucas Varriera</h3>
                     <p class="player-position">Defender</p>
                 </div>
+
             </div>
 
             <div class="player-card">
@@ -100,6 +102,7 @@
                     <h3 class="player-name">VALON BERISHA</h3>
                     <p class="player-position">Midfielder</p>
                 </div>
+
             </div>
 
             <div class="player-card">

@@ -72,6 +72,7 @@
                     <h2>FITORE E MADHE NË SHTËPI KUNDËR RIVALËVE</h2>
                     <a href="#" class="read-more">LEXO MË SHUMË &rarr;</a>
                 </div>
+
             </div>
 
             <div class="side-news-list">
@@ -83,6 +84,7 @@
                         <span class="date">28 NËNTOR</span>
                         <h4>Transferimet e reja të sezonit</h4>
                     </div>
+
                 </div>
 
                 <div class="side-card">

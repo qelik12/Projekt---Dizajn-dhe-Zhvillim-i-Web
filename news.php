@@ -93,6 +93,7 @@
                     <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
                     <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
                 </div>
+                
             </div>
 
         </div>
