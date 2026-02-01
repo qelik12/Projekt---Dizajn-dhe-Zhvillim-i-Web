@@ -7,7 +7,6 @@ class User {
         $this->conn = $db;
     }
 
-    // Funksioni për Regjistrim
     public function register($name, $surname, $email, $username, $password) {
         $query = "INSERT INTO " . $this->table_name . " (name, surname, email, username, password, role) VALUES (:name, :surname, :email, :username, :password, 'user')";
         $stmt = $this->conn->prepare($query);

@@ -22,6 +22,9 @@
         </div>
 
         <div class="brand-center">
+             <div class="logo-container">
+                <img src="images/Logo.png" alt="Logo" class="main-logo">
+            </div>
              <h1><a href="index.php" style="color: white; text-decoration: none;">LION PRIDE F.C.</a></h1>
         </div>
 

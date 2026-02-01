@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
+require_once 'models/News.php'; 
+
+$newsObj = new News();  
+$newsList = $newsObj->getAllNews(); 
+?>
 
 <script>
     const isLoggedIn = <?php echo isset($_SESSION['user_id']) ? 'true' : 'false'; ?>;
@@ -56,10 +62,42 @@
             <li><a href="matches.php">MATCHES</a></li>
             <li><a href="shop.php">SHOP</a></li>
             <li><a href="aboutus.php">ABOUT US</a></li>
-
+            <li><a href="contact.php">CONTACT US</a></li>
         </ul>
     </nav>
+
 </header>
+
+       <div class="slider-container">
+    <div class="slider">
+        <div class="slide active">
+            <img src="images/historia-stadiumi-legjendar.jpg" alt="Stadiumi">
+            <div class="slide-content">
+                <h2>Mirësevini te Lion Pride F.C.</h2>
+                <p>Më shumë se një klub, një familje.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="images/team.jpg" alt="Ekipi">
+            <div class="slide-content">
+                <h2>Forca Luanët!</h2>
+                <p>Gati për sfidat e radhës në kampionat.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="images/tifozet.jpg" alt="Tifozët">
+            <div class="slide-content">
+                <h2>Tifozët tanë, lojtari i 12-të</h2>
+                <p>Faleminderit për mbështetjen e palodhshme.</p>
+            </div>
+        </div>
+    </div>
+    
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 100px; background: linear-gradient(to top, #0a0a0a, transparent); z-index: 5;"></div>
+</div>
 
     <main class="container">
         
@@ -76,31 +114,36 @@
             </div>
 
             <div class="side-news-list">
-                <h3>LATEST NEWS</h3>
+            <h3>LATEST NEWS</h3>
+    
+             <?php if(count($newsList) > 0): ?>
+                 <?php foreach($newsList as $news): ?>
+                     <div class="side-card">
+                         <img src="<?php echo (!empty($news['image_path'])) ? $news['image_path'] : 'images/default-news.jpg'; ?>" 
+                          alt="News Image" 
+                          style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;">
                 
-                <div class="side-card">
-                    <img src="images/text-lines.png" alt="Lajm i vogel">
-                    <div class="side-info">
-                        <span class="date">28 NËNTOR</span>
-                        <h4>Transferimet e reja të sezonit</h4>
-                    </div>
+                         <div class="side-info">
+                             <span class="date">
+                                 <?php echo date('d M', strtotime($news['created_at'])); ?>
+                             </span>
+                    
+                             <h4><?php echo htmlspecialchars($news['title']); ?></h4>
+                    
+                             <a href="news_details.php?id=<?php echo $news['id']; ?>" style="font-size: 12px; color: #d4af37;">Lexo më shumë</a>
+                         </div>
+                     </div>
+                     <?php endforeach; ?>
+             <?php else: ?>
+                 <p>Nuk ka lajme për momentin.</p>
+             <?php endif; ?>
 
-                </div>
-
-                <div class="side-card">
-                    <img src="images/text-lines.png" alt="Lajm i vogel">
-                    <div class="side-info">
-                        <span class="date">27 NËNTOR</span>
-                        <h4>Intervistë ekskluzive me kapitenin</h4>
-                    </div>
-                </div>
-
-                <div class="side-card schedule-card">
-                    <h4>NDESHJA E RADHËS</h4>
-                    <p>Lion Pride vs. City FC</p>
-                    <button class="btn-small">BLEJ BILETA</button>
-                </div>
-            </div>
+             <div class="side-card schedule-card">
+                 <h4>NDESHJA E RADHËS</h4>
+                 <p>Lion Pride vs. City FC</p>
+                 <button class="btn-small">BLEJ BILETA</button>
+             </div>
+         </div>
 
         </div>
 
@@ -142,5 +185,27 @@
     </footer>
 
     <script src="main.js"></script> 
+
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        
+        currentSlide = (index + slides.length) % slides.length;
+        
+        slides[currentSlide].classList.add('active');
+    }
+
+    function changeSlide(direction) {
+        showSlide(currentSlide + direction);
+    }
+
+    setInterval(() => {
+        changeSlide(1);
+    }, 5000);
+</script>
+
 </body>
 </html>

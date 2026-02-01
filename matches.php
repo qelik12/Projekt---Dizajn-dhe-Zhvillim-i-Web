@@ -49,44 +49,41 @@
 
     <main class="matches-container">
         
-        <div class="match-row">
-            <div class="match-teams">
-                <span>LION PRIDE</span>
-                <span class="vs-badge">VS</span>
-                <span>BARCELONA</span>
-            </div>
-            <div class="match-info">
-                <span class="match-date">12 DHJETOR | 21:00</span>
-                <span class="match-stadium">Santiago Bernabéu</span>
-            </div>
-            <button class="btn-ticket">BUY TICKETS</button>
-        </div>
+         <section class="matches-container">
+              <h2 class="section-title">NDESHJET E FUNDIT & RADHËS</h2>
+    
+                 <div class="match-day">
+                     <span class="date">E Shtunë, 31 Janar 2026</span>
+                     <div class="match-row">
+                         <div class="team home">
+                             <span>LION PRIDE F.C.</span>
+                             <img src="images/Logo.png" alt="Home Logo">
+                         </div>
+                         <div class="score">2 - 1</div>
+                         <div class="team away">
+                             <img src="images/opponent-team.avif" alt="Away Logo">
+                             <span>CITY RIVALS</span>
+                         </div>
+                         <div class="match-status">FINISHED</div>
+                     </div> 
+                 </div>
 
-        <div class="match-row">
-            <div class="match-teams">
-                <span>LIVERPOOL</span>
-                <span class="vs-badge">VS</span>
-                <span>LION PRIDE</span>
-            </div>
-            <div class="match-info">
-                <span class="match-date">18 DHJETOR | 20:45</span>
-                <span class="match-stadium">Anfield</span>
-            </div>
-            <button class="btn-ticket">AWAY TICKETS</button>
-        </div>
-
-        <div class="match-row">
-            <div class="match-teams">
-                <span>LION PRIDE</span>
-                <span class="vs-badge">VS</span>
-                <span>AC MILAN</span>
-            </div>
-            <div class="match-info">
-                <span class="match-date">24 DHJETOR | 19:00</span>
-                <span class="match-stadium">Santiago Bernabéu</span>
-            </div>
-            <button class="btn-ticket">BUY TICKETS</button>
-        </div>
+                 <div class="match-day">
+                     <span class="date">E Diel, 08 Shkurt 2026</span>
+                     <div class="match-row upcoming">
+                         <div class="team home">
+                             <span>BLUE EAGLES</span>
+                             <img src="images/opponent-team2.png" alt="Home Logo">
+                         </div>
+                         <div class="score">vs</div>
+                         <div class="team away">
+                             <img src="images/Logo.png" alt="Away Logo">
+                             <span>LION PRIDE F.C.</span>
+                         </div>
+                         <div class="match-status">20:45</div>
+                     </div>
+                 </div>
+         </section>
 
     </main>
 
